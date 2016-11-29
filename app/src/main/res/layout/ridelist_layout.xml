@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" >
+        <TextView
+            android:textSize="15dp"
+            android:layout_height="match_parent"
+            android:text="Departure Date/Time"
+            android:layout_width="75dp"
+            android:id="@+id/time"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:textSize="15dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Destination"
+            android:layout_width="125dp"
+            android:id="@+id/destination"
+            android:layout_toRightOf="@+id/time">
+        </TextView>
+
+        <TextView
+            android:layout_height="match_parent"
+            android:text="Pick Up Location"
+            android:layout_width="125dp"
+            android:gravity="center"
+            android:id="@+id/pickUpLocation"
+            android:layout_toRightOf="@id/destination"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_margin="@null"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topPanel">
+        <LinearLayout
+            android:id="@+id/rideList"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@null">
+            <LinearLayout
+            android:id="@+id/item1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item1Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#294c70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 20"
+                        android:textSize="20dp"
+                        android:textColor="#e7e7e7"
+                        android:gravity="center"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:text="9:00"
+                        android:textSize="25dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#FFF"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="AM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#fa0303"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item1Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#9c9e9c">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="TORONTO, ON"
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="Eaton Centre"
+                        android:textSize="12dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item1PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#41613b">
+
+                    <TextView
+                        android:text="University of Ottawa"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="#FFF"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="75 Laurier Ave E"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:textColor="#FFF"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item2Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#83b0df">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 20"
+                        android:textSize="20dp"
+                        android:textColor="#e7e7e7"
+                        android:gravity="center"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:text="11:00"
+                        android:textSize="25dp"
+                        android:textColor="#FFF"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="AM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#fa0303"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item2Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#dde1dd">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="MONTREAL, QC"
+                        android:gravity="center_vertical"
+                        android:layout_height="45dp"
+                        android:textColor="#000"/>
+                    <TextView
+                        android:text="Notre-Dame Basilica"
+                        android:textColor="#000"
+                        android:textSize="12dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item2PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#69a95d">
+
+                    <TextView
+                        android:text="City Hall"
+                        android:layout_width="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="#FFF"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="100 Laurier Ave W"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textColor="#FFF"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item3Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#294c70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 20"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:textColor="#e7e7e7"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:text="1:00"
+                        android:textSize="30dp"
+                        android:textColor="#FFF"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="PM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#fa0303"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item3Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#9c9e9c">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="MONT-TREMBLANT, QC"
+                        android:gravity="center_vertical"
+                        android:layout_height="45dp"
+                        android:textColor="#000"/>
+                    <TextView
+                        android:text="Mont-Tremblant Ski Resort"
+                        android:layout_width="match_parent"
+                        android:textColor="#000"
+                        android:gravity="center_vertical"
+                        android:textSize="12dp"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item3PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#41613b">
+
+                    <TextView
+                        android:text="City Hall"
+                        android:layout_width="match_parent"
+                        android:textColor="#FFF"
+                        android:gravity="center_vertical"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="100 Laurier Ave W"
+                        android:gravity="center_vertical"
+                        android:textColor="#FFF"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item4"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item4Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#83b0df">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 20"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:textColor="#e7e7e7"
+                        android:layout_height="22dp" />
+                    <TextView
+                        android:text="3:00"
+                        android:textSize="30dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#FFF"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="PM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        android:textColor="#fa0303"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item4Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#dde1dd">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="City/Province"
+                        android:gravity="center"
+                        android:textColor="#000"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="Exact Location"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item4PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#69a95d">
+
+                    <TextView
+                        android:text="landmark"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="address"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item5Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#294c70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 20"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_height="22dp"
+                        android:textColor="#e7e7e7"/>
+                    <TextView
+                        android:text="5:00"
+                        android:textSize="30dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#FFF"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="PM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        android:textColor="#fa0303"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item5Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#9c9e9c">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="City/Province"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="Exact Location"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item5PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#41613b">
+
+                    <TextView
+                        android:text="landmark"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="address"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item6"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item6Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#83b0df">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 21"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_height="22dp"
+                        android:textColor="#e7e7e7"/>
+                    <TextView
+                        android:text="6:15"
+                        android:textSize="30dp"
+                        android:textColor="#FFF"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="AM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        android:textColor="#fa0303"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item6Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#dde1dd">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="City/Province"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="Exact Location"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item6PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#69a95d">
+
+                    <TextView
+                        android:text="landmark"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="address"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item7"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+                <LinearLayout
+                    android:id="@+id/item7Time"
+                    android:orientation="vertical"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:background="#294c70">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="JUL 21"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_height="22dp"
+                        android:textColor="#e7e7e7"/>
+                    <TextView
+                        android:text="10:00"
+                        android:textSize="30dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:textColor="#FFF"
+                        android:layout_height="33dp" />
+
+                    <TextView
+                        android:text="AM"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="20dp"
+                        android:textColor="#fa0303"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item7Destination"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#9c9e9c">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="City/Province"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="Exact Location"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/item7PickUp"
+                    android:orientation="vertical"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:background="#41613b">
+
+                    <TextView
+                        android:text="landmark"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="45dp" />
+                    <TextView
+                        android:text="address"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <ImageButton style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:src="@mipmap/ic_filter"
+        android:background="@null"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginRight="24dp"/>
+</RelativeLayout>
